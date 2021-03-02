@@ -1,6 +1,7 @@
 import UIKit
 
 
+//Closures are anonymous functions that can be pass around other functions
 
 func calculator(n1: Int, n2:Int, operation: (Int,Int)->Int )-> Int{
     return operation(n1,n2)
@@ -16,5 +17,24 @@ func multiply(no1: Int, no2:Int)-> Int{
     return no1 * no2
 }
 
+//1.Convert abode func into a closure
+//{ (no1: Int, no2:Int)-> Int in
+//    return no1 * no2
+//}
 
-calculator(n1: 2, n2: 3, operation: multiply)
+
+//2.Pass the closure as the input for operation
+//calculator(n1: 2, n2: 3, operation: { (no1: Int, no2:Int)-> Int in
+//    return no1 * no2
+//})
+
+//2a.In the closure we can use type in inference so is not necesary to specify Int type and we can also remove the return keyword
+//calculator(n1: 2, n2: 3, operation: { (no1, no2) in no1 * no2})
+
+//3.Anonumus parameters, replace the "(no1, no2) in" and use the $ sign with the position of the parameter ex $0
+//let result = calculator(n1: 2, n2: 3, operation: { $0 * $1})
+//print(result)
+
+//4.Trailing closure, as a rule if the last parameter in the function is a closure we can ommit the parameter name "operation" and just use {$0 * $1}
+let result = calculator(n1: 2, n2: 3){$0 * $1}
+print(result)
