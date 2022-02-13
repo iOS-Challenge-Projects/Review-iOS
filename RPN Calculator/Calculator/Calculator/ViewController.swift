@@ -25,7 +25,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return formatter;
     }()
     
-    private var calculator = Calculator() {
+    private var calculator = Calculator {
         didSet {
             if let value = calculator.topValue {
                 textField.text = numberFormatter.string(from: value as NSNumber)
@@ -35,7 +35,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    private var digitAccumulator = DigitAccumulator(){
+    private var digitAccumulator = DigitAccumulator() {
         didSet {
             if let value = digitAccumulator.value() {
                 textField.text = numberFormatter.string(from: value as NSNumber)

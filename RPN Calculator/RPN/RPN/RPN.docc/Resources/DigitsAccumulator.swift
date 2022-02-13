@@ -27,7 +27,7 @@ public struct DigitAccumulator {
     
     //MARK: - Methods
     
-    public func add(digit: Digit) throws {
+    public mutating func add(digit: Digit) throws {
         switch digit {
         case .decimalPoint:
             if digits.contains(.decimalPoint){

@@ -45,6 +45,7 @@ public struct Calculator {
         case: divide:
             result = operand1 / operand2
         }
+        stack.push(result)
     }
     
     public mutating func clearStack() {
