@@ -13,8 +13,8 @@
 		040F6A9127B865E10096AF1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040F6A8F27B865E10096AF1E /* Main.storyboard */; };
 		040F6A9327B865E20096AF1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040F6A9227B865E20096AF1E /* Assets.xcassets */; };
 		040F6A9627B865E20096AF1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040F6A9427B865E20096AF1E /* LaunchScreen.storyboard */; };
-		040F6B0127B871A40096AF1E /* RPN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 040F6B0027B86FD10096AF1E /* RPN.framework */; };
-		040F6B0227B871A40096AF1E /* RPN.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 040F6B0027B86FD10096AF1E /* RPN.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		049A095A27B95DDC0041268D /* RPN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 040F6B0027B86FD10096AF1E /* RPN.framework */; };
+		049A095B27B95DDC0041268D /* RPN.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 040F6B0027B86FD10096AF1E /* RPN.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,13 +28,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		040F6B0327B871A40096AF1E /* Embed Frameworks */ = {
+		049A095C27B95DDC0041268D /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				040F6B0227B871A40096AF1E /* RPN.framework in Embed Frameworks */,
+				049A095B27B95DDC0041268D /* RPN.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -58,7 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				040F6B0127B871A40096AF1E /* RPN.framework in Frameworks */,
+				049A095A27B95DDC0041268D /* RPN.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,7 +122,7 @@
 				040F6A8227B865E10096AF1E /* Sources */,
 				040F6A8327B865E10096AF1E /* Frameworks */,
 				040F6A8427B865E10096AF1E /* Resources */,
-				040F6B0327B871A40096AF1E /* Embed Frameworks */,
+				049A095C27B95DDC0041268D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

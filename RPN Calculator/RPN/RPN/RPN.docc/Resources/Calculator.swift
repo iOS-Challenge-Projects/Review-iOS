@@ -36,9 +36,9 @@ public struct Calculator {
         let result: Double
         
         switch `operator` {
-        case add:
+        case: add:
             result = operand1 + operand2
-        case substract:
+        case: substract:
             result = operand1 - operand2
         case multiply:
             result = operand1 * operand2
