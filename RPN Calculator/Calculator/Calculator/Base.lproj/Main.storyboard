@@ -1,24 +1,233 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="BLc-6d-SPs">
+                                <rect key="frame" x="16" y="60" width="382" height="786"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="t2h-4H-n2D">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="131"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="56"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Du9-5T-D8w">
+                                        <rect key="frame" x="0.0" y="164" width="382" height="130.5"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGp-Ep-r2Z">
+                                                <rect key="frame" x="0.0" y="0.0" width="86.5" height="130.5"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="9">
+                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="72"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="numberButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3oA-fB-wPw"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJL-cI-mtj">
+                                                <rect key="frame" x="98.5" y="0.0" width="86.5" height="130.5"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="8">
+                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="72"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="numberButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ngr-6B-yfP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4rt-Og-HF4">
+                                                <rect key="frame" x="197" y="0.0" width="86.5" height="130.5"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="7">
+                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="72"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="numberButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qK3-73-THw"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OAe-QO-heo">
+                                                <rect key="frame" x="295.5" y="0.0" width="86.5" height="130.5"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="/">
+                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="72"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="divideButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RwP-li-cS8"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="edn-bi-oym">
+                                        <rect key="frame" x="0.0" y="327.5" width="382" height="131"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7U-K5-MO3">
+                                                <rect key="frame" x="0.0" y="0.0" width="86.5" height="131"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="6">
+                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="72"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="numberButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5dt-L8-AgP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCA-hO-0rg">
+                                                <rect key="frame" x="98.5" y="0.0" width="86.5" height="131"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="5">
+                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="72"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="numberButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="95L-Rl-Eal"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AdP-Ql-ahL">
+                                                <rect key="frame" x="197" y="0.0" width="86.5" height="131"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="4">
+                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="72"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="numberButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dOi-w5-h64"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4p-qB-95c">
+                                                <rect key="frame" x="295.5" y="0.0" width="86.5" height="131"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="x">
+                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="72"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="multiplyButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0MB-kE-2V4"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="jEu-Qg-eZk">
+                                        <rect key="frame" x="0.0" y="491.5" width="382" height="130.5"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TgZ-UU-cou">
+                                                <rect key="frame" x="0.0" y="0.0" width="86.5" height="130.5"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="3">
+                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="72"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="numberButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eXl-aX-dUM"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5bU-1n-IXV">
+                                                <rect key="frame" x="98.5" y="0.0" width="86.5" height="130.5"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="2">
+                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="72"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="numberButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UtW-Mz-Lxe"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zBN-h2-bRq">
+                                                <rect key="frame" x="197" y="0.0" width="86.5" height="130.5"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="1">
+                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="72"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="numberButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="41X-P8-DRm"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cXy-u9-MVe">
+                                                <rect key="frame" x="295.5" y="0.0" width="86.5" height="130.5"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="-">
+                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="72"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="subtractButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LWp-VY-VvP"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="bVu-t0-4KF">
+                                        <rect key="frame" x="0.0" y="655" width="382" height="131"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CAH-mO-sjU">
+                                                <rect key="frame" x="0.0" y="0.0" width="86.5" height="131"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title=".">
+                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="72"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="decimalButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A7u-vm-lQZ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zS0-fV-B9M">
+                                                <rect key="frame" x="98.5" y="0.0" width="86.5" height="131"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="0">
+                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="72"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="numberButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Tx-cS-mmi"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPC-Ef-4G8">
+                                                <rect key="frame" x="197" y="0.0" width="86.5" height="131"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="=">
+                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="72"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="returnButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3EM-zK-Yad"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L6V-Oj-CVP">
+                                                <rect key="frame" x="295.5" y="0.0" width="86.5" height="131"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="+">
+                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="72"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="addButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X8d-iF-qxj"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BLc-6d-SPs" secondAttribute="trailing" constant="16" id="5vX-rw-4d8"/>
+                            <constraint firstItem="BLc-6d-SPs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="aN3-4C-AKf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BLc-6d-SPs" secondAttribute="bottom" constant="16" id="eu1-Xo-3uc"/>
+                            <constraint firstItem="BLc-6d-SPs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="pRG-ST-oCc"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textField" destination="t2h-4H-n2D" id="cC3-kR-RyR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="4" y="129"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
