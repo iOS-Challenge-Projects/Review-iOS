@@ -47,8 +47,8 @@
 		040F6AEF27B86DA60096AF1E /* RPN */ = {
 			isa = PBXGroup;
 			children = (
-				040F6AF027B86DA60096AF1E /* RPN.h */,
 				040F6AF127B86DA60096AF1E /* RPN.docc */,
+				040F6AF027B86DA60096AF1E /* RPN.h */,
 			);
 			path = RPN;
 			sourceTree = "<group>";
